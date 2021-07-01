@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  app:
+    build: ./web
+    ports:
+      - 5000:5000
+    depends_on:
+      - redis
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - ./config/redis.conf:/redis.conf
+    command: [ "redis-server", "/redis.conf" ]
