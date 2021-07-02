@@ -13,3 +13,22 @@ services:
     volumes:
       - ./config/redis.conf:/redis.conf
     command: [ "redis-server", "/redis.conf" ]
+  celery-beat:
+    build: ./web
+    entrypoint: celery
+    command: -A celery-app.celery beat --loglevel=info
+    environment:
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+      - celery-worker
+  celery-worker:
+    build: ./web
+    entrypoint: celery
+    command: -A celery-app.celery worker --loglevel=DEBUG
+    environment:
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis

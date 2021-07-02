@@ -1,8 +1,5 @@
-from celery import Celery, group, shared_task
+from celery import group, shared_task
 import time
-
-REDIS_URL = 'redis://localhost:6379/0'
-celery = Celery('tasks', broker=f'{REDIS_URL}', backend=f'{REDIS_URL}')
 
 
 @shared_task
