@@ -1,4 +1,11 @@
-# Using Celery for Orchestrating Tasks 
+# Using Celery for Orchestrating Tasks
+
+## How to read this repo
+I have a Windows. I also have a Mac. So you're essentially going to get two (not great) repos in one.   
+Mac directory: ./app  
+Windows directory: everything else (because we need docker, it takes the main directory as well as the ./web)
+
+## A quick introduction of what I'm trying to do
 There are three main actions of using Celery, to be performed in this order:
 1. Establish a message transport (broker) - for this project, we will use Redis.
 2. Get workers ready to perform tasks given
