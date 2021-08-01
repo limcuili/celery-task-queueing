@@ -1,0 +1,103 @@
+[2021-08-01 15:00:14,482: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2021-08-01 15:00:14,483: DEBUG/MainProcess] | Worker: Building graph...
+[2021-08-01 15:00:14,484: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2021-08-01 15:00:14,499: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2021-08-01 15:00:14,500: DEBUG/MainProcess] | Consumer: Building graph...
+[2021-08-01 15:00:14,543: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Agent, Mingle, Gossip, Tasks, Control, event loop}
+ 
+ -------------- celery@Cuis-MBP v5.1.2 (sun-harmonics)
+--- ***** ----- 
+-- ******* ---- macOS-10.13.6-x86_64-i386-64bit 2021-08-01 15:00:14
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         app:0x109247b80
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . app.tasks.hello_world.add
+  . app.tasks.hello_world.group_add
+  . celery.accumulate
+  . celery.backend_cleanup
+  . celery.chain
+  . celery.chord
+  . celery.chord_unlock
+  . celery.chunks
+  . celery.group
+  . celery.map
+  . celery.starmap
+
+[2021-08-01 15:00:14,583: DEBUG/MainProcess] | Worker: Starting Hub
+[2021-08-01 15:00:14,583: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:14,583: DEBUG/MainProcess] | Worker: Starting Pool
+[2021-08-01 15:00:14,703: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:14,703: DEBUG/MainProcess] | Worker: Starting Consumer
+[2021-08-01 15:00:14,704: DEBUG/MainProcess] | Consumer: Starting Connection
+[2021-08-01 15:00:14,719: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2021-08-01 15:00:14,720: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:14,720: DEBUG/MainProcess] | Consumer: Starting Events
+[2021-08-01 15:00:14,733: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:14,733: DEBUG/MainProcess] | Consumer: Starting Heart
+[2021-08-01 15:00:14,736: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:14,736: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2021-08-01 15:00:14,736: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-01 15:00:15,769: INFO/MainProcess] mingle: all alone
+[2021-08-01 15:00:15,769: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:15,769: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2021-08-01 15:00:15,774: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:15,774: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2021-08-01 15:00:15,780: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:15,780: DEBUG/MainProcess] | Consumer: Starting Control
+[2021-08-01 15:00:15,784: DEBUG/MainProcess] ^-- substep ok
+[2021-08-01 15:00:15,784: DEBUG/MainProcess] | Consumer: Starting event loop
+[2021-08-01 15:00:15,784: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2021-08-01 15:00:15,785: INFO/MainProcess] celery@Cuis-MBP ready.
+[2021-08-01 15:00:15,785: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2021-08-01 15:02:00,084: INFO/MainProcess] Task app.tasks.hello_world.group_add[86777982-704b-4227-99c2-97d620bb015b] received
+[2021-08-01 15:02:00,085: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1091ce5e0> (args:('app.tasks.hello_world.group_add', '86777982-704b-4227-99c2-97d620bb015b', {'lang': 'py', 'task': 'app.tasks.hello_world.group_add', 'id': '86777982-704b-4227-99c2-97d620bb015b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '86777982-704b-4227-99c2-97d620bb015b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen1412@Cuis-MBP', 'ignore_result': False, 'reply_to': '29849505-f8c7-3cbb-a67b-dd2cb2fa9cda', 'correlation_id': '86777982-704b-4227-99c2-97d620bb015b', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [], 'kwargs': {}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-01 15:02:00,087: WARNING/ForkPoolWorker-4] Running a group of tasks
+[2021-08-01 15:02:00,088: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:00,089: WARNING/ForkPoolWorker-4] task_list: [app.tasks.hello_world.add(0, 0, wait=0)]
+[2021-08-01 15:02:00,090: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:00,090: WARNING/ForkPoolWorker-4] task_list: [app.tasks.hello_world.add(0, 0, wait=0), app.tasks.hello_world.add(1, 1, wait=1)]
+[2021-08-01 15:02:00,091: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:00,091: WARNING/ForkPoolWorker-4] task_list: [app.tasks.hello_world.add(0, 0, wait=0), app.tasks.hello_world.add(1, 1, wait=1), app.tasks.hello_world.add(2, 2, wait=2)]
+[2021-08-01 15:02:00,092: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:00,092: WARNING/ForkPoolWorker-4] job.apply_async running...
+[2021-08-01 15:02:00,093: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:00,135: INFO/MainProcess] Task app.tasks.hello_world.add[4f75b78b-52eb-45d4-b5f0-afaa211bfb29] received
+[2021-08-01 15:02:00,135: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1091ce5e0> (args:('app.tasks.hello_world.add', '4f75b78b-52eb-45d4-b5f0-afaa211bfb29', {'lang': 'py', 'task': 'app.tasks.hello_world.add', 'id': '4f75b78b-52eb-45d4-b5f0-afaa211bfb29', 'shadow': None, 'eta': None, 'expires': None, 'group': '67e07c3a-3d50-4019-8e27-bc89257f7441', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '86777982-704b-4227-99c2-97d620bb015b', 'parent_id': '86777982-704b-4227-99c2-97d620bb015b', 'argsrepr': '(0, 0)', 'kwargsrepr': "{'wait': 0}", 'origin': 'gen1424@Cuis-MBP', 'ignore_result': False, 'reply_to': '9a71ef4f-8512-3392-8743-96bd305a9105', 'correlation_id': '4f75b78b-52eb-45d4-b5f0-afaa211bfb29', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [0, 0], 'kwargs': {'wait': 0}}, b'[[0, 0], {"wait": 0}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-01 15:02:00,136: INFO/ForkPoolWorker-4] Task app.tasks.hello_world.group_add[86777982-704b-4227-99c2-97d620bb015b] succeeded in 0.04968907600000705s: None
+[2021-08-01 15:02:00,137: INFO/MainProcess] Task app.tasks.hello_world.add[bd342e59-f571-4889-b592-796250dd3e00] received
+[2021-08-01 15:02:00,137: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1091ce5e0> (args:('app.tasks.hello_world.add', 'bd342e59-f571-4889-b592-796250dd3e00', {'lang': 'py', 'task': 'app.tasks.hello_world.add', 'id': 'bd342e59-f571-4889-b592-796250dd3e00', 'shadow': None, 'eta': None, 'expires': None, 'group': '67e07c3a-3d50-4019-8e27-bc89257f7441', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '86777982-704b-4227-99c2-97d620bb015b', 'parent_id': '86777982-704b-4227-99c2-97d620bb015b', 'argsrepr': '(1, 1)', 'kwargsrepr': "{'wait': 1}", 'origin': 'gen1424@Cuis-MBP', 'ignore_result': False, 'reply_to': '9a71ef4f-8512-3392-8743-96bd305a9105', 'correlation_id': 'bd342e59-f571-4889-b592-796250dd3e00', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [1, 1], 'kwargs': {'wait': 1}}, b'[[1, 1], {"wait": 1}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-01 15:02:00,139: WARNING/ForkPoolWorker-3] Processing task... adding up 1, 1 with delay of 1
+[2021-08-01 15:02:00,139: WARNING/ForkPoolWorker-2] Added up 0, 0 completed
+[2021-08-01 15:02:00,140: WARNING/ForkPoolWorker-3] 
+
+[2021-08-01 15:02:00,140: WARNING/ForkPoolWorker-2] 
+
+[2021-08-01 15:02:00,142: INFO/ForkPoolWorker-2] Task app.tasks.hello_world.add[4f75b78b-52eb-45d4-b5f0-afaa211bfb29] succeeded in 0.0038874389999961068s: 0
+[2021-08-01 15:02:00,149: INFO/MainProcess] Task app.tasks.hello_world.add[ad5b6108-c559-4d72-80fe-0203c7b80f06] received
+[2021-08-01 15:02:00,149: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1091ce5e0> (args:('app.tasks.hello_world.add', 'ad5b6108-c559-4d72-80fe-0203c7b80f06', {'lang': 'py', 'task': 'app.tasks.hello_world.add', 'id': 'ad5b6108-c559-4d72-80fe-0203c7b80f06', 'shadow': None, 'eta': None, 'expires': None, 'group': '67e07c3a-3d50-4019-8e27-bc89257f7441', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '86777982-704b-4227-99c2-97d620bb015b', 'parent_id': '86777982-704b-4227-99c2-97d620bb015b', 'argsrepr': '(2, 2)', 'kwargsrepr': "{'wait': 2}", 'origin': 'gen1424@Cuis-MBP', 'ignore_result': False, 'reply_to': '9a71ef4f-8512-3392-8743-96bd305a9105', 'correlation_id': 'ad5b6108-c559-4d72-80fe-0203c7b80f06', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [2, 2], 'kwargs': {'wait': 2}}, b'[[2, 2], {"wait": 2}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-01 15:02:00,152: WARNING/ForkPoolWorker-4] Processing task... adding up 2, 2 with delay of 2
+[2021-08-01 15:02:00,153: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:01,142: WARNING/ForkPoolWorker-3] Added up 1, 1 with delay 1 completed
+[2021-08-01 15:02:01,143: WARNING/ForkPoolWorker-3] 
+
+[2021-08-01 15:02:01,144: INFO/ForkPoolWorker-3] Task app.tasks.hello_world.add[bd342e59-f571-4889-b592-796250dd3e00] succeeded in 1.005207102s: 2
+[2021-08-01 15:02:02,155: WARNING/ForkPoolWorker-4] Added up 2, 2 with delay 2 completed
+[2021-08-01 15:02:02,156: WARNING/ForkPoolWorker-4] 
+
+[2021-08-01 15:02:02,156: INFO/ForkPoolWorker-4] Task app.tasks.hello_world.add[ad5b6108-c559-4d72-80fe-0203c7b80f06] succeeded in 2.0039959409999994s: 4

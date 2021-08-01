@@ -8,5 +8,5 @@ kill the server `redis-cli shutdown`.
 
 ### Kick off a Celery beat and execute tasks
 start the beat, then send workers to execute the tasks:  
-`celery -A app beat --loglevel=INFO`
-`celery -A app worker --loglevel=DEBUG`
+`celery -A app beat --loglevel=INFO`  
+`celery -A app worker --purge --loglevel=DEBUG`
