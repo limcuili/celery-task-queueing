@@ -10,3 +10,13 @@ kill the server `redis-cli shutdown`.
 start the beat, then send workers to execute the tasks:  
 `celery -A app beat --loglevel=INFO`  
 `celery -A app worker --purge --loglevel=DEBUG`
+
+
+### Kick off a worker and manually input tasks
+from your project directory terminal:
+`celery -A app worker --purge --loglevel=DEBUG --concurrency=4 -f celery.logs`
+from your project directory python console:
+```
+from app.tasks.tasks import orchestration
+orchestration()
+```

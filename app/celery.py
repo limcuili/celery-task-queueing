@@ -2,10 +2,10 @@ from celery import Celery
 from celery.schedules import crontab
 
 app = Celery('app',
-             include=['app.tasks.hello_world'])
+             backend='redis://localhost:6379/0',
+             broker='redis://localhost:6379/0',
+             include=['app.tasks.hello_world', 'app.tasks.tasks'])
 app.config_from_object('app.celeryconfig')
-
-
 
 app.conf.beat_schedule = {
     "everyday-task": {

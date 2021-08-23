@@ -1,0 +1,168 @@
+[2021-08-23 11:27:31,594: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2021-08-23 11:27:31,595: DEBUG/MainProcess] | Worker: Building graph...
+[2021-08-23 11:27:31,595: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2021-08-23 11:27:31,605: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2021-08-23 11:27:31,605: DEBUG/MainProcess] | Consumer: Building graph...
+[2021-08-23 11:27:31,636: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Agent, Mingle, Tasks, Control, Gossip, event loop}
+[2021-08-23 11:27:31,666: DEBUG/MainProcess] | Worker: Starting Hub
+[2021-08-23 11:27:31,667: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:31,667: DEBUG/MainProcess] | Worker: Starting Pool
+[2021-08-23 11:27:31,764: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:31,766: DEBUG/MainProcess] | Worker: Starting Consumer
+[2021-08-23 11:27:31,767: DEBUG/MainProcess] | Consumer: Starting Connection
+[2021-08-23 11:27:31,779: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2021-08-23 11:27:31,779: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:31,779: DEBUG/MainProcess] | Consumer: Starting Events
+[2021-08-23 11:27:31,787: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:31,788: DEBUG/MainProcess] | Consumer: Starting Heart
+[2021-08-23 11:27:31,789: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:31,790: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2021-08-23 11:27:31,790: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-23 11:27:32,814: INFO/MainProcess] mingle: all alone
+[2021-08-23 11:27:32,814: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:32,814: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2021-08-23 11:27:32,819: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:32,819: DEBUG/MainProcess] | Consumer: Starting Control
+[2021-08-23 11:27:32,824: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:32,824: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2021-08-23 11:27:32,828: DEBUG/MainProcess] ^-- substep ok
+[2021-08-23 11:27:32,828: DEBUG/MainProcess] | Consumer: Starting event loop
+[2021-08-23 11:27:32,828: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2021-08-23 11:27:32,829: INFO/MainProcess] celery@Cuis-MBP ready.
+[2021-08-23 11:27:32,829: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2021-08-23 11:27:48,799: INFO/MainProcess] Task app.tasks.tasks.add[7379245b-b5c8-4a48-a6d5-5da7424503d1] received
+[2021-08-23 11:27:48,799: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '7379245b-b5c8-4a48-a6d5-5da7424503d1', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '7379245b-b5c8-4a48-a6d5-5da7424503d1', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7379245b-b5c8-4a48-a6d5-5da7424503d1', 'parent_id': None, 'argsrepr': "(5, 'cuili')", 'kwargsrepr': '{}', 'origin': 'gen1144@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '7379245b-b5c8-4a48-a6d5-5da7424503d1', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [5, 'cuili'], 'kwargs': {}}, b'[[5, "cuili"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [5, "cuili"], "kwargs": {}, "options": {"task_id": "67c9a9d2-bc3c-4218-9cd7-23af6eba541d", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef", "group_id":... kwargs:{})
+[2021-08-23 11:27:48,800: INFO/MainProcess] Task app.tasks.tasks.add[4b4f8eb2-429f-406f-a7fb-597471c5d8ef] received
+[2021-08-23 11:27:48,800: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', 'parent_id': None, 'argsrepr': "(10, 'yinian')", 'kwargsrepr': '{}', 'origin': 'gen1144@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [10, 'yinian'], 'kwargs': {}}, b'[[10, "yinian"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [10, "yinian"], "kwargs": {}, "options": {"task_id": "9db91ac7-be27-44d0-83ce-adc0d1b41e6c", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef", "group_id":... kwargs:{})
+[2021-08-23 11:27:48,800: INFO/ForkPoolWorker-1] cuili add : BEGIN
+[2021-08-23 11:27:48,801: INFO/ForkPoolWorker-1] waiting for cuili...
+[2021-08-23 11:27:48,802: INFO/MainProcess] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] received
+[2021-08-23 11:27:48,802: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '6761f893-47b2-4c6b-bf33-ce4e4818d48b', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': None, 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1144@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [20, "tristan"], "kwargs": {}, "options": {"task_id": "8f7effa4-ec5c-416e-9e9e-461f84617c8d", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef", "group_id":... kwargs:{})
+[2021-08-23 11:27:48,802: INFO/ForkPoolWorker-3] yinian add : BEGIN
+[2021-08-23 11:27:48,803: INFO/ForkPoolWorker-3] waiting for yinian...
+[2021-08-23 11:27:48,804: INFO/ForkPoolWorker-2] tristan add : BEGIN
+[2021-08-23 11:27:48,805: INFO/ForkPoolWorker-2] waiting for tristan...
+[2021-08-23 11:27:49,802: DEBUG/ForkPoolWorker-1] waiting for cuili: 0
+[2021-08-23 11:27:49,803: DEBUG/ForkPoolWorker-3] waiting for yinian: 0
+[2021-08-23 11:27:49,806: DEBUG/ForkPoolWorker-2] waiting for tristan: 0
+[2021-08-23 11:27:54,808: DEBUG/ForkPoolWorker-1] adding cuili : 0
+[2021-08-23 11:27:54,808: DEBUG/ForkPoolWorker-3] waiting for yinian: 5
+[2021-08-23 11:27:54,813: DEBUG/ForkPoolWorker-2] waiting for tristan: 5
+[2021-08-23 11:27:59,814: DEBUG/ForkPoolWorker-3] adding yinian : 0
+[2021-08-23 11:27:59,814: DEBUG/ForkPoolWorker-1] adding cuili : 5
+[2021-08-23 11:27:59,819: DEBUG/ForkPoolWorker-2] waiting for tristan: 10
+[2021-08-23 11:28:03,818: INFO/ForkPoolWorker-1] checking cuili... all good!
+[2021-08-23 11:28:03,850: INFO/MainProcess] Task app.tasks.tasks.add[67c9a9d2-bc3c-4218-9cd7-23af6eba541d] received
+[2021-08-23 11:28:03,851: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '67c9a9d2-bc3c-4218-9cd7-23af6eba541d', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '67c9a9d2-bc3c-4218-9cd7-23af6eba541d', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7379245b-b5c8-4a48-a6d5-5da7424503d1', 'parent_id': '7379245b-b5c8-4a48-a6d5-5da7424503d1', 'argsrepr': "[5, 'cuili']", 'kwargsrepr': '{}', 'origin': 'gen1180@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '67c9a9d2-bc3c-4218-9cd7-23af6eba541d', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [5, 'cuili'], 'kwargs': {}}, b'[[5, "cuili"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:28:03,852: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[7379245b-b5c8-4a48-a6d5-5da7424503d1] succeeded in 15.051361065000002s: True
+[2021-08-23 11:28:03,852: INFO/ForkPoolWorker-4] cuili add : BEGIN
+[2021-08-23 11:28:03,853: INFO/ForkPoolWorker-4] waiting for cuili...
+[2021-08-23 11:28:04,820: DEBUG/ForkPoolWorker-3] adding yinian : 5
+[2021-08-23 11:28:04,825: DEBUG/ForkPoolWorker-2] waiting for tristan: 15
+[2021-08-23 11:28:04,855: DEBUG/ForkPoolWorker-4] waiting for cuili: 0
+[2021-08-23 11:28:08,861: INFO/MainProcess] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] received
+[2021-08-23 11:28:08,861: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '6761f893-47b2-4c6b-bf33-ce4e4818d48b', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 1, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1181@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [20, "tristan"], "kwargs": {}, "options": {"task_id": "8f7effa4-ec5c-416e-9e9e-461f84617c8d", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef",... kwargs:{})
+[2021-08-23 11:28:08,861: INFO/ForkPoolWorker-1] tristan add : BEGIN
+[2021-08-23 11:28:08,862: INFO/ForkPoolWorker-1] waiting for tristan...
+[2021-08-23 11:28:08,863: INFO/ForkPoolWorker-2] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] retry: Retry in 0s
+[2021-08-23 11:28:09,828: DEBUG/ForkPoolWorker-3] adding yinian : 10
+[2021-08-23 11:28:09,860: DEBUG/ForkPoolWorker-4] adding cuili : 0
+[2021-08-23 11:28:09,863: DEBUG/ForkPoolWorker-1] waiting for tristan: 0
+[2021-08-23 11:28:14,836: DEBUG/ForkPoolWorker-3] adding yinian : 15
+[2021-08-23 11:28:14,866: DEBUG/ForkPoolWorker-4] adding cuili : 5
+[2021-08-23 11:28:14,870: DEBUG/ForkPoolWorker-1] waiting for tristan: 5
+[2021-08-23 11:28:18,842: INFO/ForkPoolWorker-3] checking yinian... all good!
+[2021-08-23 11:28:18,872: INFO/ForkPoolWorker-4] checking cuili... all good!
+[2021-08-23 11:28:18,874: INFO/MainProcess] Task app.tasks.tasks.add[9db91ac7-be27-44d0-83ce-adc0d1b41e6c] received
+[2021-08-23 11:28:18,875: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '9db91ac7-be27-44d0-83ce-adc0d1b41e6c', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '9db91ac7-be27-44d0-83ce-adc0d1b41e6c', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', 'parent_id': '4b4f8eb2-429f-406f-a7fb-597471c5d8ef', 'argsrepr': "[10, 'yinian']", 'kwargsrepr': '{}', 'origin': 'gen1182@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '9db91ac7-be27-44d0-83ce-adc0d1b41e6c', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [10, 'yinian'], 'kwargs': {}}, b'[[10, "yinian"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:28:18,876: INFO/ForkPoolWorker-2] yinian add : BEGIN
+[2021-08-23 11:28:18,876: INFO/ForkPoolWorker-2] waiting for yinian...
+[2021-08-23 11:28:18,876: INFO/ForkPoolWorker-3] Task app.tasks.tasks.add[4b4f8eb2-429f-406f-a7fb-597471c5d8ef] succeeded in 30.073525633000003s: True
+[2021-08-23 11:28:18,877: INFO/ForkPoolWorker-4] Task app.tasks.tasks.add[67c9a9d2-bc3c-4218-9cd7-23af6eba541d] succeeded in 15.024598744999999s: True
+[2021-08-23 11:28:19,876: DEBUG/ForkPoolWorker-1] waiting for tristan: 10
+[2021-08-23 11:28:19,878: DEBUG/ForkPoolWorker-2] waiting for yinian: 0
+[2021-08-23 11:28:24,884: DEBUG/ForkPoolWorker-2] waiting for yinian: 5
+[2021-08-23 11:28:24,884: DEBUG/ForkPoolWorker-1] waiting for tristan: 15
+[2021-08-23 11:28:28,894: INFO/MainProcess] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] received
+[2021-08-23 11:28:28,895: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '6761f893-47b2-4c6b-bf33-ce4e4818d48b', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 2, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1180@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [20, "tristan"], "kwargs": {}, "options": {"task_id": "8f7effa4-ec5c-416e-9e9e-461f84617c8d", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef",... kwargs:{})
+[2021-08-23 11:28:28,896: INFO/ForkPoolWorker-3] tristan add : BEGIN
+[2021-08-23 11:28:28,896: INFO/ForkPoolWorker-3] waiting for tristan...
+[2021-08-23 11:28:28,896: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] retry: Retry in 0s
+[2021-08-23 11:28:29,893: DEBUG/ForkPoolWorker-2] adding yinian : 0
+[2021-08-23 11:28:29,898: DEBUG/ForkPoolWorker-3] waiting for tristan: 0
+[2021-08-23 11:28:34,897: DEBUG/ForkPoolWorker-2] adding yinian : 5
+[2021-08-23 11:28:34,906: DEBUG/ForkPoolWorker-3] waiting for tristan: 5
+[2021-08-23 11:28:39,904: DEBUG/ForkPoolWorker-2] adding yinian : 10
+[2021-08-23 11:28:39,913: DEBUG/ForkPoolWorker-3] waiting for tristan: 10
+[2021-08-23 11:28:44,914: DEBUG/ForkPoolWorker-2] adding yinian : 15
+[2021-08-23 11:28:44,920: DEBUG/ForkPoolWorker-3] waiting for tristan: 15
+[2021-08-23 11:28:48,920: INFO/ForkPoolWorker-2] checking yinian... all good!
+[2021-08-23 11:28:48,922: INFO/ForkPoolWorker-2] Task app.tasks.tasks.add[9db91ac7-be27-44d0-83ce-adc0d1b41e6c] succeeded in 30.045899493s: True
+[2021-08-23 11:28:48,929: INFO/MainProcess] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] received
+[2021-08-23 11:28:48,929: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '6761f893-47b2-4c6b-bf33-ce4e4818d48b', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 3, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1182@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [{"task": "app.tasks.tasks.add", "args": [20, "tristan"], "kwargs": {}, "options": {"task_id": "8f7effa4-ec5c-416e-9e9e-461f84617c8d", "reply_to": "1bd63fe9-5b40-39dd-8b01-2e87ee2747ef",... kwargs:{})
+[2021-08-23 11:28:48,930: DEBUG/ForkPoolWorker-1] tristan hit max retries! returning.
+[2021-08-23 11:28:48,931: INFO/ForkPoolWorker-3] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] retry: Retry in 0s
+[2021-08-23 11:28:48,932: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[6761f893-47b2-4c6b-bf33-ce4e4818d48b] succeeded in 0.002538508000000661s: None
+[2021-08-23 11:28:48,933: INFO/MainProcess] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] received
+[2021-08-23 11:28:48,933: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '8f7effa4-ec5c-416e-9e9e-461f84617c8d', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "[20, 'tristan']", 'kwargsrepr': '{}', 'origin': 'gen1180@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:28:48,934: INFO/ForkPoolWorker-1] tristan add : BEGIN
+[2021-08-23 11:28:48,934: INFO/ForkPoolWorker-1] waiting for tristan...
+[2021-08-23 11:28:49,936: DEBUG/ForkPoolWorker-1] waiting for tristan: 0
+[2021-08-23 11:28:54,943: DEBUG/ForkPoolWorker-1] waiting for tristan: 5
+[2021-08-23 11:28:59,951: DEBUG/ForkPoolWorker-1] waiting for tristan: 10
+[2021-08-23 11:29:04,959: DEBUG/ForkPoolWorker-1] waiting for tristan: 15
+[2021-08-23 11:29:08,969: INFO/MainProcess] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] received
+[2021-08-23 11:29:08,972: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '8f7effa4-ec5c-416e-9e9e-461f84617c8d', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 1, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1180@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:29:08,969: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] retry: Retry in 0s
+[2021-08-23 11:29:08,973: INFO/ForkPoolWorker-1] tristan add : BEGIN
+[2021-08-23 11:29:08,974: INFO/ForkPoolWorker-1] waiting for tristan...
+[2021-08-23 11:29:09,976: DEBUG/ForkPoolWorker-1] waiting for tristan: 0
+[2021-08-23 11:29:14,984: DEBUG/ForkPoolWorker-1] waiting for tristan: 5
+[2021-08-23 11:29:19,993: DEBUG/ForkPoolWorker-1] waiting for tristan: 10
+[2021-08-23 11:29:25,001: DEBUG/ForkPoolWorker-1] waiting for tristan: 15
+[2021-08-23 11:29:29,011: INFO/MainProcess] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] received
+[2021-08-23 11:29:29,012: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '8f7effa4-ec5c-416e-9e9e-461f84617c8d', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 2, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1180@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:29:29,012: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] retry: Retry in 0s
+[2021-08-23 11:29:29,013: INFO/ForkPoolWorker-3] tristan add : BEGIN
+[2021-08-23 11:29:29,013: INFO/ForkPoolWorker-3] waiting for tristan...
+[2021-08-23 11:29:30,014: DEBUG/ForkPoolWorker-3] waiting for tristan: 0
+[2021-08-23 11:29:35,021: DEBUG/ForkPoolWorker-3] waiting for tristan: 5
+[2021-08-23 11:29:40,029: DEBUG/ForkPoolWorker-3] waiting for tristan: 10
+[2021-08-23 11:29:45,039: DEBUG/ForkPoolWorker-3] waiting for tristan: 15
+[2021-08-23 11:29:49,049: INFO/MainProcess] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] received
+[2021-08-23 11:29:49,050: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x1107085e0> (args:('app.tasks.tasks.add', '8f7effa4-ec5c-416e-9e9e-461f84617c8d', {'lang': 'py', 'task': 'app.tasks.tasks.add', 'id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'shadow': None, 'eta': None, 'expires': None, 'group': 'cd2b5318-6e28-4fb2-910d-c95b51797e9c', 'group_index': None, 'retries': 3, 'timelimit': [None, None], 'root_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'parent_id': '6761f893-47b2-4c6b-bf33-ce4e4818d48b', 'argsrepr': "(20, 'tristan')", 'kwargsrepr': '{}', 'origin': 'gen1182@Cuis-MBP', 'ignore_result': False, 'reply_to': '1bd63fe9-5b40-39dd-8b01-2e87ee2747ef', 'correlation_id': '8f7effa4-ec5c-416e-9e9e-461f84617c8d', 'hostname': 'celery@Cuis-MBP', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': [20, 'tristan'], 'kwargs': {}}, b'[[20, "tristan"], {}, {"callbacks": null, "errbacks": null, "chain": [], "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2021-08-23 11:29:49,049: INFO/ForkPoolWorker-3] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] retry: Retry in 0s
+[2021-08-23 11:29:49,051: DEBUG/ForkPoolWorker-1] tristan hit max retries! returning.
+[2021-08-23 11:29:49,052: INFO/ForkPoolWorker-1] Task app.tasks.tasks.add[8f7effa4-ec5c-416e-9e9e-461f84617c8d] succeeded in 0.0013909999999839329s: None
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Worker: Closing Hub...
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Worker: Closing Pool...
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2021-08-23 14:34:47,904: DEBUG/MainProcess] | Consumer: Closing Events...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing Control...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2021-08-23 14:34:47,905: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2021-08-23 14:34:47,907: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2021-08-23 14:34:47,909: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2021-08-23 14:34:47,910: DEBUG/MainProcess] Canceling task consumer...
+[2021-08-23 14:34:47,910: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2021-08-23 14:34:47,910: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2021-08-23 14:34:47,911: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2021-08-23 14:34:47,911: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2021-08-23 14:34:47,911: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2021-08-23 14:34:48,918: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] Canceling task consumer...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] Closing consumer channel...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2021-08-23 14:34:48,919: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2021-08-23 14:34:48,920: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2021-08-23 14:34:48,921: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
